@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "webpack.config.dev.js",
+    "webpack.config.prod.js",
+    ".babelrc",
+    "src/server"
+  ]
+}

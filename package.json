@@ -1,0 +1,45 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node build/server/server",
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/server/server",
+    "build": "npm run clean && NODE_ENV=production babel src/server -d build/server -s && webpack --config webpack.config.prod.js",
+    "clean": "rm -rf build public/dist",
+    "buildAndStart": "npm run build && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bkgunby",
+  "license": "MIT",
+  "dependencies": {
+    "aphrodite": "^0.5.0",
+    "autoprefixer": "^6.3.7",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.11.0",
+    "color": "^0.11.3",
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.13.1",
+    "postcss-loader": "^0.9.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-router": "^2.6.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.1"
+  }
+}
