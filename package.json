@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node build/server/server",
-    "dev": "NODE_ENV=development nodemon --exec babel-node src/server/server",
+    "dev": "nodemon --exec babel-node src/server/server",
     "build": "npm run clean && NODE_ENV=production babel src/server -d build/server -s && webpack --config webpack.config.prod.js",
     "clean": "rm -rf build public/dist",
     "buildAndStart": "npm run build && npm run start",
@@ -27,18 +27,22 @@
     "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
+    "helmet": "^2.1.2",
     "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
     "postcss-loader": "^0.9.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-router": "^2.6.0",
+    "sequelize": "^3.23.6",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1"
   },
   "devDependencies": {
+    "dotenv": "^2.0.0",
     "nodemon": "^1.9.2",
+    "sqlite3": "^3.1.4",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.1"
   }

@@ -1,4 +1,7 @@
-.DS_Store
 node_modules
 build
 public/dist
+
+.DS_Store
+src/server/.env
+src/server/db/database.sqlite
